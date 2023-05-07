@@ -1,0 +1,27 @@
+<div class="container">
+    <!--<button class="btn"  (click)="add_close()">Add</button>-->
+    <form action="" (ngSubmit)="submit_form()">
+        <div class="form-control">
+            <div class="row">
+                <div class="col d-flex">
+                    <label class="form-control w-25 m-4" for="name">name</label>
+                    <input class="form-control h-50 m-4" [(ngModel)]="name_ts" type="text" id="name" name="name_ts" placeholder="name">
+                </div>
+    
+                <div class="col d-flex">
+                    <label class="form-control w-25 m-4" for="website">website</label>
+                    <input class="form-control h-50 m-4" [(ngModel)]="website_ts" type="text" id="website" name="website_ts" placeholder="website">
+                </div>
+            </div>
+            
+            <div class="col">
+                <label class="form-control-check m-4" for="online">is online</label>
+                <input class="form-control-check" [(ngModel)]="is_online_ts" type="checkbox" id="online" name="is_online_ts" placeholder="">
+            </div>        
+            <button class="btn btn-success my-3 mx-3" id="submit" (on_add_member)="submit_form()">Submit</button>
+        </div>
+        
+    </form>
+</div>
+
+{{ name_ts }}
